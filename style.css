@@ -1,0 +1,178 @@
+/*Basic reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScmE7xkQ7mCGqxBkJP2ZzPzkDsRDM3uJUj44JntjYvwg&s=10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+.container {
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.logo {
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    color: brown;
+}
+
+/*Screens*/
+.screen {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+}
+
+.screen.active {
+    display: block;
+}
+
+/*Start screen*/
+#start-screen h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#start-screen p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.quiz-header {
+    margin-bottom: 2rem;
+}
+
+#question-text {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    color: blueviolet;
+    margin-bottom: 10px;
+}
+
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.answer-btn {
+    background-color: bisque;
+    color: black;
+    border: 2px solid #eadbc8;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transform: all 0.3s ease;
+}
+
+.answer-btn:hover {
+    background-color: orange;
+    border-color: black;
+}
+
+.answer-btn.correct {
+    background-color: lightgreen;
+    border-color: white;
+    color: slategrey;
+}
+
+.answer-btn.incorrect {
+    background-color: red;
+    border-color: black;
+    color: gray;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: bisque;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: orange;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/*Result screen*/
+#result-screen h1 {
+    color: chocolate;
+    margin-bottom: 30px;
+}
+
+.result-info {
+    background-color: burlywood;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.result-info p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+#result-message {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+button {
+    background-color: peru;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: chocolate;
+}
+
+/*Responsive design*/
+@media (max-width: 500px) {
+    .screen {
+        padding: 1rem;
+    }
+
+    #start-screen h1 {
+        font-size: 2rem;
+    }
+}
+
